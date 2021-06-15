@@ -25,13 +25,25 @@ body {
   border: #000 solid 2rem;
   border-radius: 50%;
   position: relative;
-  transform: rotate(270deg);
+}
+.clock::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 20rem;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: top;
+  transform: translate(-50%) rotate(180deg);
 }
 .clock__face {
   background: rgba(255, 255, 255, 0.6);
   height: 100%;
   border-radius: 50%;
   position: relative;
+  transform: rotate(270deg);
 }
 .clock__face__second {
   position: absolute;
@@ -39,7 +51,7 @@ body {
   top: 50%;
   transform-origin: left center;
   transform: translateY(-50%);
-  width: 45%;
+  width: 50%;
   height: 1rem;
   background: red;
 }
