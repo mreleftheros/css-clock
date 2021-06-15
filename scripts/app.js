@@ -3,22 +3,22 @@ const minuteHandle = document.getElementById("minuteHandle");
 const hourHandle = document.getElementById("hourHandle");
 
 const updateClockRotation = (time, timeMax, element) => {
-  
+  const timeDegrees = (time / timeMax * 360).toFixed(0);
+  element.style.transform = `rotate(${timeDegrees}deg)`;
 }
 
 const setDate = () => {
   setInterval(() => {
     const now = new Date();
-
-    // seconds
+    
+    // get time variables
     const seconds = now.getSeconds();
-    const secondDegrees = (seconds / 60 * 360).toFixed(0);
-    secondHandle.style.transform = `rotate(${secondDegrees}deg)`;
+    const minutes = now.getMinutes();
+    const hours = now.getHours();
 
-    // minutes
-
-
-    //hours
+    updateClockRotation(seconds, 60, secondHandle);
+    updateClockRotation(minutes, 60, minuteHandle);
+    updateClockRotation(hours, 12, hourHandle);
   }, 1000)
 };
 
