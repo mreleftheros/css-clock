@@ -51,9 +51,10 @@ body {
   top: 50%;
   transform-origin: left center;
   transform: translateY(-50%);
-  width: 50%;
-  height: 1rem;
+  width: 45%;
+  height: 0.5rem;
   background: red;
+  transition: 0.05s cubic-bezier(0, 3.52, 1, -0.39);
 }
 .clock__face__minute {
   position: absolute;
@@ -62,7 +63,7 @@ body {
   transform-origin: left center;
   transform: translateY(-50%);
   width: 40%;
-  height: 1rem;
+  height: 0.5rem;
   background: red;
 }
 .clock__face__hour {
@@ -72,6 +73,6 @@ body {
   transform-origin: left center;
   transform: translateY(-50%);
   width: 25%;
-  height: 1rem;
+  height: 0.5rem;
   background: red;
 }/*# sourceMappingURL=style.css.map */
